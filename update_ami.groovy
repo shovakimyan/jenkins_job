@@ -2,7 +2,7 @@
 
 pipeline {
     agent {
-        label "infra"
+        label any
     }
  
     environment {
