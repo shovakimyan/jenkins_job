@@ -18,7 +18,6 @@ pipeline {
             steps {
 		     echo "Prepare Infrastructure is completed successfully"
                     }
-                }
             }
 
 	
@@ -28,6 +27,6 @@ pipeline {
                 build job: ''lunch_templates_sync'', parameters: [string(name: 'pipeline', value: ${params.pipeline_type})], propagate: false
                 }
             }
-
+    	}
     }
 
