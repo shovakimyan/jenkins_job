@@ -1,4 +1,4 @@
-pipelineJob('aws/ec2/lunch_templates_sync') {
+pipelineJob('lunch_templates_sync') {
     def repo = 'https://github.com/intelinair/infrastructure.git'
 
     description('AG lunch templates update with new AMI image')
