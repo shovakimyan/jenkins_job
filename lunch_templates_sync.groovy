@@ -13,7 +13,7 @@ pipelineJob('aws/ec2/lunch_templates_sync') {
                         url(repo)
 
                     }
-                    branch('*/master')
+                    branch('*/main')
                     scriptPath('jobs/update_launch_template.groovy')
                     extensions {
                         pruneBranches()
