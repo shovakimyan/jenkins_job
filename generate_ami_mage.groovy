@@ -13,7 +13,9 @@ pipelineJob('aws/ec2/generate_ami_image') {
     }
 
     definition {
-        cpsScm {
+        cpsScm 
+           scm {
+
                 git {
                     remote {
                         url(repo)
@@ -24,6 +26,7 @@ pipelineJob('aws/ec2/generate_ami_image') {
                         pruneBranches()
                         gitLFSPull()
                     }
+                }
             }
         }
     }
