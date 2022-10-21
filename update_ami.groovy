@@ -20,8 +20,8 @@ pipeline {
                     }
                 }
             }
-        }
 
+	
         stage('Update Launch Templates') {
         when { expression { return params.update_launch_template } }
             steps {
