@@ -20,7 +20,7 @@ pipelineJob('aws/ec2/generate_ami_image') {
                         url(repo)
                     }
                     branch('*/main')
-                    scriptPath('jobs/update_ami.groovy')
+                    scriptPath('update_ami.groovy')
                     extensions {
                         pruneBranches()
                         gitLFSPull()
