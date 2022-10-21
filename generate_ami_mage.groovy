@@ -12,24 +12,16 @@ pipelineJob('aws/ec2/generate_ami_image') {
         booleanParam(name: 'Update lunch templates', defaultValue: true)
     }
 
- 
-        definition {
+    
+    
+    definition {
         cpsScm {
             scm {
-                git {
-                    remote {
-                        name('github')
-                        url(repo)
-                        refspec(null)
-                    }
-                    branch('main')
-                    scriptPath('update_ami.groovy')
-                    extensions {
-                        pruneBranches()
-                    }
-                    browser {}
-                }
+                git('https://github.com/shovakimyan/jenkins_job.git')
             }
         }
+    }   
+              
+    
     }
     
