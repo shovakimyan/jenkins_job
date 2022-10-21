@@ -19,7 +19,7 @@ pipelineJob('aws/ec2/generate_ami_image') {
                     remote {
                         url(repo)
                     }
-                    branch('*/master')
+                    branch('*/main')
                     scriptPath('jobs/update_ami.groovy')
                     extensions {
                         pruneBranches()
