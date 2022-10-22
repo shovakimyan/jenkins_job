@@ -33,7 +33,7 @@ pipeline {
      		when { expression { return params.TOGGLE } }
      		steps {
         	sh 'echo "running the stage"'
-                build job: "second"
+                build job: "second", parameters: [string(name: 'pipeline', value: params.pipeline)]
    	 	}
 	}	    
 	    
