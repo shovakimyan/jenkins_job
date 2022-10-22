@@ -23,8 +23,6 @@ pipeline {
 		     echo "template is updated for $(params.pipeline)"
                     }
             }
-
-	    
 	
     	}
     }
