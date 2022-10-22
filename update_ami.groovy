@@ -4,7 +4,7 @@ pipeline {
     agent any
 	
     environment {
-        AWS_DEFAULT_REGION       = "us-east-1"
+        AWS_DEFAULT_REGION  = True
     }
     stages {
 
@@ -18,6 +18,14 @@ pipeline {
                     }
             }
 
+	    
+	stage('test cond') {
+     		when { expression { return params.BUILD_TESTING2 } }
+     		steps {
+        	sh 'echo "running the stage"'
+   	 	}
+	}	    
+	    
 	
     	}
     }
