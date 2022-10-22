@@ -4,11 +4,9 @@ pipeline {
 	
     parameters {
 	    
-	    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
 
-        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
 
-        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+        choice(name: 'pipeline', choices: ['analytics', 'deep_learning'], description: 'processing pipelines')
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
 
@@ -22,7 +20,7 @@ pipeline {
                 PROCESSING_SSH_KEY_PATH = "/tmp/processing-key.pem"
             }
             steps {
-		     echo "template is updated"
+		     echo "template is updated for $(params.pipeline)"
                     }
             }
 
