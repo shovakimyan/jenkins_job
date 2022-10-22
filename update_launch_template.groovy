@@ -20,7 +20,7 @@ pipeline {
                 PROCESSING_SSH_KEY_PATH = "/tmp/processing-key.pem"
             }
             steps {
-		     echo "template is updated for $(params.pipeline)"
+		    echo "template is updated for ${params.pipeline}"
                     }
             }
 	
