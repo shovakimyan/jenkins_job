@@ -22,7 +22,7 @@ pipeline {
                 PROCESSING_SSH_KEY_PATH = "/tmp/processing-key.pem"
             }
             steps {
-		     echo "Launch template is updated"
+		     echo "second"
                     }
             }
 
