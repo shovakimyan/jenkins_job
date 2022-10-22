@@ -38,6 +38,7 @@ pipeline {
      		when { expression { return params.TOGGLE } }
      		steps {
         	sh 'echo "running the stage"'
+                build job: "first"
    	 	}
 	}	    
 	    
