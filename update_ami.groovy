@@ -10,7 +10,7 @@ pipeline {
 
         stage ("Prepare Infrastructure") {
             environment {
-                PROCESSING_SSH_KEY = credentials("ssh-key-processing-machine")
+                PROCESSING_SSH_KEY = "ssh-key-processing-machine"
                 PROCESSING_SSH_KEY_PATH = "/tmp/processing-key.pem"
             }
             steps {
