@@ -12,16 +12,5 @@ pipelineJob('aws/ec2/generate_ami_image') {
         booleanParam(name: 'Update lunch templates', defaultValue: true)
     }
 
-    
-    
-    definition {
-        cpsScm {
-            scm {
-                git('https://github.com/shovakimyan/jenkins_job.git')
-            }
-        }
-    }   
-              
-    
-    }
+   
     
