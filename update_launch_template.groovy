@@ -6,7 +6,6 @@ pipeline {
 	    
 
 
-        choice(name: 'pipeline', choices: ['analytics', 'deep_learning'], description: 'processing pipelines')
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
 
