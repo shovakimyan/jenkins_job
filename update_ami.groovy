@@ -19,12 +19,12 @@ pipeline {
             }
 
 	
-        stage('Update Launch Templates') {
-        when { expression { return params.update_launch_template } }
-            steps {
-                build job: "lunch_templates_sync", parameters: [string(name: 'pipeline', value: params.pipeline_type)], propagate: false
-                }
-            }
-    	}
+//         stage('Update Launch Templates') {
+//         when { expression { return params.update_launch_template } }
+//             steps {
+//                 build job: "lunch_templates_sync", parameters: [string(name: 'pipeline', value: params.pipeline_type)], propagate: false
+//                 }
+//             }
+//     	}
     }
 
