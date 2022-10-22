@@ -1,4 +1,4 @@
-pipeline {
+pipeline ("update_launch_template") {
     agent any
 	
 	
