@@ -1,31 +1,32 @@
-#!groovy
-
 pipeline {
-    agent {
-        label "infra"
+    agent any
+	
+	
+    parameters {
+	    
+	    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
+
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+
     }
-    options {
-        timeout(time: 40, unit: "MINUTES")
-    }
-    environment {
-        AWS_DEFAULT_REGION = "us-east-1"
-    }
+	
     stages {
 
         stage ("Prepare Infrastructure") {
             environment {
-                PROCESSING_SSH_KEY = credentials("ssh-key-processing-machine")
+                PROCESSING_SSH_KEY = "ssh-key-processing-machine"
                 PROCESSING_SSH_KEY_PATH = "/tmp/processing-key.pem"
             }
             steps {
-                    script {
-                        sh """#!/bin/bash
-                            pip3 install -r requirements.txt
-                            echo ${params.pipeline_type}
-                        """
+		     echo "Launch template is updated"
                     }
-                }
             }
-        }
+
+	    
+	
+    	}
     }
-}
