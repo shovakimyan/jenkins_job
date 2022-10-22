@@ -11,6 +11,7 @@ pipelineJob('aws/ec2/generate_ami_image') {
         ], 'Choose the pipeline type for which AMI will be generated.')
         booleanParam(name: 'Update lunch templates', defaultValue: true)
     }
+}
 
    
     
