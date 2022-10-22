@@ -38,7 +38,7 @@ pipeline {
      		when { expression { return params.TOGGLE } }
      		steps {
         	sh 'echo "running the stage"'
-                build job: "update_launch_template.groovy"
+                build job: "update_launch_template"
    	 	}
 	}	    
 	    
