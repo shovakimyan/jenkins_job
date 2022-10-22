@@ -20,7 +20,7 @@ pipeline {
 
 	    
 	stage('test cond') {
-     		when { expression { return params.BUILD_TESTING2 } }
+     		when { expression { return env.AWS_DEFAULT_REGION } }
      		steps {
         	sh 'echo "running the stage"'
    	 	}
